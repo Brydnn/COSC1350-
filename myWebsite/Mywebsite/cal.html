@@ -1,0 +1,67 @@
+
+<!--
+	Student Name: Brydnn Killpack
+	File Name: Tip Calculator
+	Date: 8/29/2024
+ -->
+ <html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Coustard:900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Use the header area for the website name or logo. The header contains static content. -->
+
+	<!-- Use the nav area to add hyperlinks to other pages within the website. It contains static content. -->
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About Me</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="calculator.html">Tip Calculator</a></li>
+		</ul>
+	</nav>
+
+	<!-- Use the main area to add the main content of the webpage -->
+	<main>
+
+		<form id="tipCalcForm" onsubmit="calculateTip(); return false;">
+			<script type="text/javascript" src="js/tipCalc.js"></script>
+			
+			<h1>Tip Calculator</h1>
+			<p></p>
+			<div>
+				<label for="billAmount">Bill Amount:</label><br>
+				<input type="text" name="billAmount" id="billAmount" placeholder="Enter Bill Amount Here" required>
+				<p></p>
+				<label for="tipPercentage">Service Quality:</label>
+				<br>
+				<select name="tipPercentage" id="tipPercentage"  >
+					<option>Excellent (25%)</option>
+					<option>Good (20%)</option>
+					<option>Fair (15%)</option>
+					<option>Poor (10%)</option>
+				</select>
+				<p></p>
+				<input type="submit" value="Calculate Tip" id="btnCalcTip" onclick="calculateTip()" >
+				<p></p>
+			</div>
+			<div id="divTotals" display="inline-block" >
+				<span>Tip Amount: $<var id='tipAmount'></var> | Total Bill: $<var id='totalAmount'></var></span>
+			</div>
+		</form>
+	</main>
+
+	<!-- Use the footer area to add static footer content, such as email and copyright info. -->
+	<footer>
+		<p>&copy; Copyright 2024. All Rights Reserved.</p>
+	
+	</footer>
+</body>
+
+</html>
